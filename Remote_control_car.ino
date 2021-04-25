@@ -15,7 +15,6 @@ const int throttlepin = 53;
 const int steeringpin = 52;
 const int modepin = 51;
 
-
 const int leftfrontechopin = 22;
 const int leftfronttrigpin = 23;
 const int frontleftsensorechopin = 24;
@@ -35,7 +34,6 @@ const int irbackleftpin = 42;
 const int irbackrightpin = 43;
 const int irdownleftpin = 44;
 const int irdownrightpin = 45;
-
 
 int rotation;
 int mode = 1;
@@ -319,7 +317,6 @@ void loop() {
             frontdistance = duration * 0.034 / 2;
           }
 
-
           irleftfrontstatus = digitalRead(irleftfrontpin);
           irrightfrontstatus = digitalRead(irrightfrontpin);
           irfrontleftstatus = digitalRead(irfrontleftpin);
@@ -351,7 +348,6 @@ void loop() {
           Serial.print(steeringval);
           Serial.print(" | Mode: ");
           Serial.println(modeval);
-
 
           if ((throttleval > 1400) and (throttleval < 1600)) throttlemode = 0; //Check throttle mode
           else if (throttleval < 1400) throttlemode = 1;
@@ -408,7 +404,6 @@ void loop() {
           if ((duration * 0.034 / 2) < 300) {
             frontdistance = duration * 0.034 / 2;
           }
-
 
           irleftfrontstatus = digitalRead(irleftfrontpin);
           irrightfrontstatus = digitalRead(irrightfrontpin);
@@ -495,7 +490,6 @@ void loop() {
           if ((duration * 0.034 / 2) < 300) {
             frontdistance = duration * 0.034 / 2;
           }
-
 
           irleftfrontstatus = digitalRead(irleftfrontpin);
           irrightfrontstatus = digitalRead(irrightfrontpin);
@@ -1733,8 +1727,6 @@ void loop() {
           else if (steeringval > 1600) steeringmode = 2;
         }
       }
-
     }
-
   }
 }
